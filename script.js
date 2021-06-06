@@ -50,5 +50,15 @@ playerPick.forEach(function (i) {
 });
 
 refresh.addEventListener("click", function () {
-  location.reload();
+  playing = true;
+  document.querySelector(`.btn--batu`).classList.remove("hidden");
+  document.querySelector(".btn--kertas").classList.remove("hidden");
+  document.querySelector(".btn--gunting").classList.remove("hidden");
+  document.querySelector(".comp--batu").classList.remove("hidden");
+  document.querySelector(".comp--kertas").classList.remove("hidden");
+  document.querySelector(".comp--gunting").classList.remove("hidden");
+  resultDisplay.classList.remove("draw");
+  resultDisplay.classList.remove("hasil");
+  resultDisplay.innerHTML = "<h1>VS</h1>";
+  resultDisplay.querySelector("h1").classList.add("vs");
 });
