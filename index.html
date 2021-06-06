@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+
+    <title>Challenge Chapter 4</title>
+  </head>
+  <body>
+    <div class="background container-fluid">
+      <div class="container-fluid d-flex align-items-center fixed-top">
+        <h1 style="font-size: 50px"><</h1>
+        <img src="./logo 1.png" alt="" class="ms-3" />
+        <h2 class="ms-3">ROCK PAPER SCISSORS</h2>
+      </div>
+      <div class="konten container-fluid d-flex align-items-center">
+        <div class="container">
+          <div class="row">
+            <div id="player-area" class="col-5 text-center">
+              <h1>PLAYER 1</h1>
+              <div class="player p-3 mx-auto"><img src="/batu.png" alt="" class="batu" /></div>
+              <div class="player p-3 mx-auto"><img src="/kertas.png" alt="" class="kertas" /></div>
+              <div class="player p-3 mx-auto"><img src="/gunting.png" alt="" class="gunting" /></div>
+            </div>
+            <div class="col-2 d-flex justify-content-center align-items-center">
+              <div id="result-area" class="text-center">
+                <h1 class="vs">VS</h1>
+              </div>
+            </div>
+            <div id="comp-area" class="col-5 text-center">
+              <h1>COM</h1>
+              <div class="comp p-3 mx-auto"><img src="/batu.png" alt="" class="batu" /></div>
+              <div class="comp p-3 mx-auto"><img src="/kertas.png" alt="" class="kertas" /></div>
+              <div class="comp p-3 mx-auto"><img src="/gunting.png" alt="" class="gunting" /></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="new-game col text-center">
+              <img src="/refresh.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  </body>
+</html>
