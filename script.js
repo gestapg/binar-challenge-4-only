@@ -1,6 +1,6 @@
-const playerPick = document.querySelectorAll("#player-area img");
+const playerPickBtn = document.querySelectorAll("#player-area img");
+const refreshBtn = document.querySelector(".new-game");
 const resultDisplay = document.getElementById("result-area");
-const refresh = document.querySelector(".new-game");
 const compArea = document.querySelectorAll("#comp-area div");
 const playerArea = document.querySelectorAll("#player-area div");
 
@@ -33,7 +33,7 @@ function loadingPick() {
 
 let playing = true;
 
-playerPick.forEach(function (i) {
+playerPickBtn.forEach(function (i) {
   i.addEventListener("click", function () {
     if (playing) {
       // Player 1 pick choice
@@ -42,8 +42,13 @@ playerPick.forEach(function (i) {
       const playerHighlight = document.querySelector(`.btn--${playerPick}`);
       playerHighlight.classList.add("hidden");
 
+      // Player 1 cannot pick again unless its refreshed
+      playing = false;
+
+      // Waiting for the computer pick
       loadingPick();
 
+      // After 1 second
       setTimeout(function () {
         for (let i = 0; i < compArea.length; i++) {
           compArea[i].classList.remove("hidden");
@@ -64,15 +69,12 @@ playerPick.forEach(function (i) {
         } else {
           resultDisplay.classList.add("hasil");
         }
-
-        // Player 1 cannot pick again unless its refreshed
-        playing = false;
       }, 1000);
     }
   });
 });
 
-refresh.addEventListener("click", function () {
+refreshBtn.addEventListener("click", function () {
   playing = true;
   for (let i = 0; i < compArea.length; i++) {
     compArea[i].classList.remove("hidden");
